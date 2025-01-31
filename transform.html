@@ -171,6 +171,12 @@
         .box:hover .translateZ {
             transform: rotate3d(3, 2, 2, 90deg) translateZ(50px);
         }
+
+        .box:hover .origin {
+            /*transform-origin: right bottom;*/
+            transform-origin: 10% 10%;
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 
@@ -195,6 +201,14 @@
     <!-- translate: box ke suppose 30px samne nibo ejonno translate use kora hoi.
     translateX 50%  dile X axis e box ke 50% samne nibo translateY 50%  dile y axis e box ke 50% samne nibo.
     translate(50% ,50%) er mane holo eta ekdom center e rakhe. -->
+
+    <!-- transform - origin: {left, top, right, bottom} ai property die die amra transform er property ke handle korte parbo . 
+    suppose amra box ke rotate kortesi 45 deg te and box ke nich right side theke rotate korbo tai transform 
+    origin die right bottom lekhe ai side theke rotate korbo so nijer moto property bole dite parbo .
+    abr amra %,px,vw/vh use kore bole dite parbo kon point theke rotate or scale hobe 
+
+    transform-origin: 50% 50%; // center : by default eta dhora hoi
+    -->
 
 
     <div class="wrap">
@@ -256,6 +270,9 @@
 
         <div class="box">
             <div class="blue translateZ">translateZ</div>
+        </div>
+        <div class="box">
+            <div class="blue origin">transformOrigin</div>
         </div>
     </div>
 </body>
